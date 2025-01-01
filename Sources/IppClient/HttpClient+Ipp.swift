@@ -13,7 +13,7 @@ public extension HTTPClient {
         _ request: IppRequest,
         authentication: IppAuthentication? = nil,
         data: consuming HTTPClientRequest.Body? = nil,
-        timeout: TimeAmount = .seconds(10),
+        timeout: TimeAmount = .seconds(60),
         maxResponseBytes: Int = 1024 * 1024
     ) async throws -> IppResponse {
         let httpRequest = try HTTPClientRequest(ippRequest: request, authentication: authentication, data: data)
